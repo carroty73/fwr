@@ -21,9 +21,9 @@ namespace CarrotyApplication {
         private PointPairList tempPointPairList; // 온도 데이터
         private PointPairList humiPointPairList; // 습도 데이터
 
-        private LineItem accXCurve;    // 가속도 x 그래프
-        private LineItem accYCurve;    // 가속도 y 그래프 abc
-        private LineItem accZCurve;    // 가속도 z 그래프
+        //private LineItem accXCurve;    // 가속도 x 그래프
+        //private LineItem accYCurve;    // 가속도 y 그래프 abc
+        //private LineItem accZCurve;    // 가속도 z 그래프
         
         private LineItem tempCurve; // 온도 그래프
         private LineItem humiCurve; // 습도 그래프
@@ -40,6 +40,8 @@ namespace CarrotyApplication {
         //int accY = 0;
         //int accZ = 0;
 
+        public WindowsApplication.InfoForm infoForm;
+
         private byte totalBytesCount = 0;
 
         public int getTotalBytesCount() {
@@ -54,6 +56,12 @@ namespace CarrotyApplication {
             //drawAccGraph(tempZedGraphControl);
             drawTempGraph(tempZedGraphControl);
             drawHumiGraph(humiZedGraphControl);
+        }
+
+        public void initInfoForm() {
+            infoForm = new WindowsApplication.InfoForm();
+            infoForm.Visible = true;
+            infoForm.Activate();
         }
 
         public void uartInit() {
@@ -169,6 +177,11 @@ namespace CarrotyApplication {
             uartInit();
             initForm();
             initGraph();
+            initInfoForm();
+            this.WindowState = FormWindowState.Normal;
+            infoForm.Focus();
+            infoForm.Activate();
+            
             loader = new INIFileLoader();
         }
 

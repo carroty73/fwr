@@ -187,3 +187,11 @@ C:\Users\SANGHOON\Desktop\carroty_terminal_20150228\CarrotyApplication\obj\Debug
 C:\Users\SANGHOON\Desktop\carroty_terminal_20150228\CarrotyApplication\obj\Debug\CarrotyApplication.csproj.GenerateResource.Cache
 C:\Users\SANGHOON\Desktop\carroty_terminal_20150228\CarrotyApplication\obj\Debug\WindowsApplication2.exe
 C:\Users\SANGHOON\Desktop\carroty_terminal_20150228\CarrotyApplication\obj\Debug\WindowsApplication2.pdb
+D:\my_cs\fwr\CarrotyApplication\bin\Debug\WindowsApplication2.exe
+D:\my_cs\fwr\CarrotyApplication\bin\Debug\WindowsApplication2.pdb
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\CarrotyApplication.Form1.resources
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication2.Properties.Resources.resources
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication.InfoForm.resources
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\CarrotyApplication.csproj.GenerateResource.Cache
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication2.exe
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication2.pdb
