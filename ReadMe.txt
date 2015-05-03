@@ -1,3 +1,4 @@
+나를 읽어줘
 carroty_terminal_v2\CarrotyApplication\bin\Debug안에 있는WindowsApplication2를 실행하면 됩니다.
 개발시에는 VisualStudio가 있으시다면 폴더를 열자마자 CarrotyApplication.sln을 실행합니다만, 개발할일이 없을터이니 이 파일을 열 필요는 없겠죠.
 
