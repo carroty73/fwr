@@ -1,0 +1,8 @@
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\bin\Release\WindowsApplication2.exe
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\bin\Release\WindowsApplication2.pdb
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\ResolveAssemblyReference.cache
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\WindowsApplication2.Form1.resources
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\WindowsApplication2.Properties.Resources.resources
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\WindowsApplication2.csproj.GenerateResource.Cache
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\WindowsApplication2.exe
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Release\WindowsApplication2.pdb

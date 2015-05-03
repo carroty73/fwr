@@ -1,0 +1,30 @@
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\WindowsApplication2.Form1.resources
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\WindowsApplication2.Properties.Resources.resources
+C:\Documents and Settings\carroty\바탕 화면\windowsapplication\WindowsApplication2\obj\Debug\WindowsApplication2.csproj.GenerateResource.Cache
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+E:\2_당근이_책쓴거\당근이의AVR갖고놀기(완간-개정중)\당근이교재에첨가할윈프로그램\시리얼통신_C#\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+C:\Documents and Settings\oyee\바탕 화면\시리얼통신_c_\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+C:\Documents and Settings\oyee\바탕 화면\시리얼통신_c_\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.Form1.resources
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.Properties.Resources.resources
+C:\Users\nam\Desktop\온도계 만들기\C_프로젝트_당근이_KFC+아이폰\src\my_cs\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.csproj.GenerateResource.Cache
+C:\Users\nam\Desktop\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+C:\Users\nam\Desktop\uart_controller\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\WindowsApplication2.Form1.resources
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\WindowsApplication2.Properties.Resources.resources
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\WindowsApplication2.csproj.GenerateResource.Cache
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+C:\Users\nam\Desktop\carroty_app_v2\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
