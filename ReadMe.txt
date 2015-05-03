@@ -1,21 +1,21 @@
-음식물 처리기 모니터링 및 각종 속성을 설정해 주는 프로그램입니다.
-
-메인 모터의 방향, 시간 및 온도 및 습도의 한계값 등등의 속성을 설정해 줄수 있습니다.
-또한 음식물 처리기의 온도 및 습도를 실시간(1초간격)으로 읽어옵니다.
-개발 단계라 UI가 미려하지도 않고, 설정시 약간의 불편함은 있습니다만,
+당근닷컴 당근이 팀장입니다.
+이 프로그램은 음식물 처리기의 모니터링 및 각종 속성을 설정해 주는 프로그램입니다.
+속성은 메인 모터의 방향, 시간 및 온도 및 습도의 한계값 등등을 설정할 수 있고
+모니터링은 음식물 처리기의 온도 및 습도를 실시간(1초간격)으로 읽어옵니다.
+개발 단계라 UI가 미려하지도 않고, 설정시 약간의 불편함은 있습니다만, 
 동작에 대한 검증은 마쳤습니다.
-사소한 불편함은 걍 그려려니 하고 여기까지만 만드는 것으로.. ^^
 
+사소한 불편함은 걍 그려려니 하고 여기까지만 만드는 것으로.. ^^
 프로그램에 대한 설명 및 실행 방법, 주의사항은 아래 링크를 따라가시기 바랍니다.
 
 2015.05.01 mady by carroty.com
 
 
 1. 프로그램에 대한 소개
-http://carroty.synology.me:8080/prj/fwr/intro/index.htm
+http://carroty.synology.me:8080/prj/fwr/intro/article.xml
 
 2. 프로그램 업데이트 및 디버깅 내용
-http://carroty.synology.me:8080/prj/fwr/update/index.htm
+http://carroty.synology.me:8080/prj/fwr/update/article.xml
 
 3. 프로그램 매뉴얼
-http://carroty.synology.me:8080/prj/fwr/usage/index.htm
+http://carroty.synology.me:8080/prj/fwr/usage/article.xml
