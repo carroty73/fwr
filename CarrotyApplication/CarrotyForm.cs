@@ -679,24 +679,24 @@ namespace CarrotyApplication {
             if (!isNumber(grindSol1OnTimeTextBox.Text)) { MessageBox.Show("솔밸브1 ON 시간이 숫자가 아닙니다."); return; }
             if (!isNumber(grindSol1OffTimeTextBox.Text)) { MessageBox.Show("솔밸브1 OFF 시간이 숫자가 아닙니다."); return; }
 
-            int grind1stTime = Convert.ToInt32(grind1stTextBox.Text);
-            int grind2stTime = Convert.ToInt32(grind2stTextBox.Text);
-            int grind3stTime = Convert.ToInt32(grind3stTextBox.Text);
-            int grind4stTime = Convert.ToInt32(grind4stTextBox.Text);
-            int grind5stTime = Convert.ToInt32(grind5stTextBox.Text);
-            int grind6stTime = Convert.ToInt32(grind6stTextBox.Text);
-            int grind7stTime = Convert.ToInt32(grind7stTextBox.Text);
-            int grind8stTime = Convert.ToInt32(grind8stTextBox.Text);
-            int grind9stTime = Convert.ToInt32(grind9stTextBox.Text);
-            int grind10stTime = Convert.ToInt32(grind10stTextBox.Text);
-            int grind11stTime = Convert.ToInt32(grind11stTextBox.Text);
-            int grind12stTime = Convert.ToInt32(grind12stTextBox.Text);
-            int grind13stTime = Convert.ToInt32(grind13stTextBox.Text);
-            int grind14stTime = Convert.ToInt32(grind14stTextBox.Text);
-            int grind15stTime = Convert.ToInt32(grind15stTextBox.Text);
+            byte grind1stTime = Convert.ToByte(grind1stTextBox.Text);
+            byte grind2stTime = Convert.ToByte(grind2stTextBox.Text);
+            byte grind3stTime = Convert.ToByte(grind3stTextBox.Text);
+            byte grind4stTime = Convert.ToByte(grind4stTextBox.Text);
+            byte grind5stTime = Convert.ToByte(grind5stTextBox.Text);
+            byte grind6stTime = Convert.ToByte(grind6stTextBox.Text);
+            byte grind7stTime = Convert.ToByte(grind7stTextBox.Text);
+            byte grind8stTime = Convert.ToByte(grind8stTextBox.Text);
+            byte grind9stTime = Convert.ToByte(grind9stTextBox.Text);
+            byte grind10stTime = Convert.ToByte(grind10stTextBox.Text);
+            byte grind11stTime = Convert.ToByte(grind11stTextBox.Text);
+            byte grind12stTime = Convert.ToByte(grind12stTextBox.Text);
+            byte grind13stTime = Convert.ToByte(grind13stTextBox.Text);
+            byte grind14stTime = Convert.ToByte(grind14stTextBox.Text);
+            byte grind15stTime = Convert.ToByte(grind15stTextBox.Text);
 
-            int grindSol1OnTime  = Convert.ToInt32(grindSol1OnTimeTextBox.Text);
-            int grindSol1OffTime = Convert.ToInt32(grindSol1OffTimeTextBox.Text);
+            byte grindSol1OnTime = Convert.ToByte(grindSol1OnTimeTextBox.Text);
+            byte grindSol1OffTime = Convert.ToByte(grindSol1OffTimeTextBox.Text);
 
             // 비지니스로직 검사, 입력되는 값이 숫자라 하더라도, 일정 범위안에 들어와야 되요.
             // 아니면 걍 함수를 나가버려요.
@@ -719,7 +719,7 @@ namespace CarrotyApplication {
             if (!isValid(grindSol1OnTime)) { MessageBox.Show("입력값의 범위는 5<값<250 입니다."); return; }
             if (!isValid(grindSol1OffTime)) { MessageBox.Show("입력값의 범위는 5<값<250 입니다."); return; }
 
-            byte[] data = new byte[15];
+            byte[] sendData = new byte[64];
             //string getComoBoxSelectedString = "";
             /*
             data[4] = FWRProtocol.PAUSE; // 0x00 
@@ -729,216 +729,36 @@ namespace CarrotyApplication {
             data[8] = Convert.ToByte(grindSol1OffTimeTextBox.Text);
             */
 
-            data[totalBytesCount] = Convert.ToByte(grind1stTime); totalBytesCount++;
+            //sendData[totalBytesCount] = Convert.ToByte(grind1stTime); totalBytesCount++;
 
-            //getComoBoxSelectedString = grind2stComboBox.SelectedItem.ToString();
-            try {
-                if (grind2stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind2stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind2stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
 
-            try {
-                if (grind3stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind3stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind3stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
+            //;;grind1stTime
+            //;;grind2stTime
 
-            try {
-                if (grind4stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind4stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind4stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
+            if (grind1stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind1stTime; }
+            totalByteCountLabel.Text = Convert.ToString(totalBytesCount);
+            if (grind2stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind2stTime; }
+            if (grind3stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind3stTime; }
+            if (grind4stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind4stTime; }
+            if (grind5stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind5stTime; }
+            if (grind6stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind6stTime; }
+            if (grind7stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind7stTime; }
+            if (grind8stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind8stTime; }
+            if (grind9stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind9stTime; }
+            if (grind10stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind10stTime; }
+            if (grind11stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind11stTime; }
+            if (grind12stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind12stTime; }
+            if (grind13stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind13stTime; }
+            if (grind14stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind14stTime; }
+            if (grind15stComboBox.SelectedItem.ToString() == "STOP") { sendData[totalBytesCount++] = 0x00; } else { sendData[totalBytesCount++] = grind15stTime; }
 
-            try {
-                if (grind5stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind5stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind5stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
+            sendData[totalBytesCount++] = grindSol1OnTime;
+            sendData[totalBytesCount++] = grindSol1OffTime;
+            sendData[totalBytesCount] = FWRProtocol.ETX;
 
-            try {
-                if (grind6stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind6stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind6stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
+            FWRPacket tmpPacket = new FWRPacket(FWRProtocol.GRIND, sendData, 17+3);
 
-            try {
-                if (grind7stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind7stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind7stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind8stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind8stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind8stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind9stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind9stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind9stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind10stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind10stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind10stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind11stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind11stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind11stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind12stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind12stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind12stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind13stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind13stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind13stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            try {
-                if (grind14stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind14stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind14stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());   }
-
-            try {
-                if (grind15stComboBox.SelectedItem.ToString() == "STOP") {
-                    data[totalBytesCount] = 0x00; totalBytesCount++;
-                    data[totalBytesCount] = Convert.ToByte(grind15stTime); totalBytesCount++;
-                }
-                else {
-                    data[totalBytesCount] = Convert.ToByte(grind15stTime); totalBytesCount++;
-                }
-            }
-            catch (IndexOutOfRangeException exception) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); Console.WriteLine(exception.ToString());  }
-
-            /*
-            data[totalBytesCount] = Convert.ToByte(grind1stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind3stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind4stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind5stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind6stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind7stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind8stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind9stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind10stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind11stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind12stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind13stTime); totalBytesCount++;
-            data[totalBytesCount] = Convert.ToByte(grind14stTime); totalBytesCount++;
-            */
-
-            /*
-            data[count] = Convert.ToByte(grind1stTime);
-            if (grind2stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; }  else { data[++count] = Convert.ToByte(grind2stTime); }
-            if (grind3stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind3stTime);}
-            if (grind4stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind4stTime);}
-            if (grind5stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind5stTime);}
-            if (grind6stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind6stTime);}
-            if (grind7stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind7stTime);}
-            if (grind8stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind8stTime);}
-            if (grind9stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind9stTime);}
-            if (grind10stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind10stTime);}
-            if (grind11stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind11stTime);}
-            if (grind12stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind12stTime);}
-            if (grind13stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind13stTime);}
-            if (grind14stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind14stTime);}
-            if (grind15stComboBox.SelectedItem.ToString() == "STOP") { data[++count] = 0x00; } if (count > 15) { MessageBox.Show("최대 패킷 사이즈를 넘어섰습니다."); return; } else { data[++count] = Convert.ToByte(grind15stTime); }
-            */
-            /*
-            data[1] = Convert.ToByte(grind1stTime);
-            data[2] = Convert.ToByte(grind1stTime);
-            data[3] = Convert.ToByte(grind1stTime);
-            data[4] = Convert.ToByte(grind1stTime);
-            data[5] = Convert.ToByte(grind1stTime);
-            data[6] = Convert.ToByte(grind1stTime);
-            data[7] = Convert.ToByte(grind1stTime);
-            data[8] = Convert.ToByte(grind1stTime);
-            data[9] = Convert.ToByte(grind1stTime);
-            data[10] = Convert.ToByte(grind1stTime);
-            data[11] = Convert.ToByte(grind1stTime);
-            data[12] = Convert.ToByte(grind1stTime);
-            data[13] = Convert.ToByte(grind1stTime);
-            data[14] = Convert.ToByte(grind1stTime);
-            data[15] = Convert.ToByte(grind1stTime);
-            */
-            FWRPacket tmpPacket = new FWRPacket(FWRProtocol.GRIND, data, 15);
-            uart.write(tmpPacket.getBuffer(), 0, 15+3); 
-
+            uart.write(tmpPacket.getBuffer(), 0, 17+3); 
             totalBytesCount = 0;
         }
 

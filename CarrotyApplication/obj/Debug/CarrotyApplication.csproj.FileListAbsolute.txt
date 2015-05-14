@@ -195,3 +195,4 @@ D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication.InfoForm.resources
 D:\my_cs\fwr\CarrotyApplication\obj\Debug\CarrotyApplication.csproj.GenerateResource.Cache
 D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication2.exe
 D:\my_cs\fwr\CarrotyApplication\obj\Debug\WindowsApplication2.pdb
+D:\my_cs\fwr\CarrotyApplication\obj\Debug\CarrotyApplication.csprojResolveAssemblyReference.cache

@@ -38,8 +38,7 @@ namespace CarrotyApplication {
             buffer[2] = FWRProtocol.ETX;
         }
 
-        public FWRPacket(byte cmd, byte[] data, int dataCount)
-        {
+        public FWRPacket(byte cmd, byte[] data, int dataCount) {
             //setSTX(FWRProtocol.STX);
             //setCmd(cmd);
             //setData(data);

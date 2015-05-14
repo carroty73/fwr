@@ -10,6 +10,7 @@
 
 2015.05.01 mady by carroty.com
 
+2015.05.14 솔밸브값이 안나가는 버그 수정
 
 1. 프로그램에 대한 소개
 http://carroty.synology.me:8080/prj/fwr/intro/article.xml
